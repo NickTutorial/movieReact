@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+.gridContainer {
+    display: grid;
+    justify-items: center;
+    width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.title_category {
+    margin-left: 15px;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+}
+
+.carousel .btn {
+    position:sticky;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 50%;
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    background-color: #062238;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0c4977;
+}
+
+.prev {
+    left: 10px;
+}
+
+.carousel .btn:disabled {
+    cursor: initial;
+    background-color: #0622388d;
+}
+
+.next {
+    right: 10px;
+}
+
+.sliderContainer {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    margin-left: 15px;
+    position: relative;
+    scroll-behavior: smooth;
+    border-radius: 10px;
+    height: 450px;
+    align-items: center;
+    z-index: 1;
+}
+
+.sliderCard {
+    height: 400px;
+    width: 100%;
+}
+
+.sliderCard img {
+    height: 100%;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #0622384a;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.sliderCard img:hover {
+  transform: scale(1.05);
+}
+
+.loadMore {
+    cursor: pointer;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #062238;
+    height: 60px;
+    width: 120px;
+    border: none;
+}
+.loadMore:hover {
+    background-color: #0622388d;
+}
+
+.loadMoreContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+    width: 100%;
+}
+
+.detailsContainer {
+    display: flex;
+    height: 500px;
+    padding: 60px;
+}
+
+.imageContainer {
+    width: 500px;
+    height: 100%;
+}
+
+.imageContainer img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.overview {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+.additionalInfo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonSite {
+    cursor: pointer;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #062238;
+    height: 60px;
+    width: 120px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  svg {
+    color: #ffffff;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
+
+.searchBar {
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+}
+
+.searchButton {
+    cursor: pointer;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #062238;
+    width: 100px;
+    height: 30px;
+    border: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .sliderContainer{
+    overflow: scroll;
+  }
+
+  .detailsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageContainer {
+    width: 400px;
+  }
+
+  }
+  @media only screen and (min-width: 768px) {
+    .gridContainer{
+         grid-template-columns: repeat(2, 1fr); 
+    }
+    }
+ @media only screen and (min-width: 1098px) {
+   .gridContainer{
+             grid-template-columns: repeat(3, 1fr); 
+        }
+        }
+ @media only screen and (min-width: 1300px) {
+   .gridContainer{
+             grid-template-columns: repeat(4, 1fr); 
+        }
+        }
+
+        @media only screen and (min-width: 1500px) {
+            .gridContainer{
+                      grid-template-columns: repeat(5, 1fr); 
+                 }
+                 }

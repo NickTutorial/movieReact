@@ -1,0 +1,38 @@
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #062238;
+    z-index: 10;
+    color: #ffffff;
+    display: flex;
+    overflow: hidden;
+    justify-content:space-around;
+}
+
+.logo {
+    height: 29px;
+    width: 245px;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.linkContainer {
+    display: flex;
+    justify-items: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.linkContainer div {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.linkContainer div:hover {
+    color: #575454;
+}
