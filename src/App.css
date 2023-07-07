@@ -106,13 +106,13 @@
 
 .detailsContainer {
     display: flex;
-    height: 500px;
+    height: 100%;
     padding: 60px;
 }
 
 .imageContainer {
     width: 500px;
-    height: 100%;
+    height: 500px;
 }
 
 .imageContainer img {
