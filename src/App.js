@@ -5,7 +5,7 @@ import Movies from "./pages/Movies";
 import Series from "./pages/Series"
 import Header from "./components/Header";
 import ContentPage from "./pages/ContentPage";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Route path="/series" Component={Series} />
         <Route path="/contentpage/:type/:id" Component={ContentPage} />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );  
 }
