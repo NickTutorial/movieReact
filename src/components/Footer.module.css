@@ -5,10 +5,8 @@
     z-index: 10;
     color: #ffffff;
     display: flex;
-    overflow: hidden;
     justify-content:space-around;
-    bottom: 0;
-    position: relative;
+    justify-self: flex-end;
 }
 
 .logo {
