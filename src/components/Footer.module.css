@@ -8,7 +8,7 @@
     overflow: hidden;
     justify-content:space-around;
     bottom: 0;
-    position: absolute;
+    position: relative;
 }
 
 .logo {
