@@ -1,0 +1,22 @@
+[build]
+  command = "npm run build"    # The build command for your project
+  publish = "build"            # The directory to publish
+
+[build.environment]
+  NODE_VERSION = "14"          # Specify the Node.js version to use
+
+[[redirects]]
+  from = "/*"                 # Redirect all paths
+  to = "/index.html"          # Redirect to the index.html file
+  status = 200                # Set the HTTP status code for the redirect
+
+[[headers]]
+  for = "/*"                  # Set headers for all paths
+    [headers.values]
+    X-Frame-Options = "DENY"  # Set X-Frame-Options header to DENY
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"  # Enable the Netlify Sitemap plugin
+
+[context.production.environment]
+  API_URL = "https://api.example.com"  # Set environment variable for production context
